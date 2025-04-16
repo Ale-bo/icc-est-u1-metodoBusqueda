@@ -1,6 +1,5 @@
-import java.util.Scanner;
-
-import controllers.MetodosBusqueda;
+import controllers.MetododeBusquedaBinaria;
+//import controllers.MetodosBusqueda;
 import models.Person;
 
 public class App {
@@ -13,8 +12,11 @@ public class App {
         personas[4] = new Person(105, "Luis");
         personas[5] = new Person(106, "sofia");
         personas[6] = new Person(107, "Pedro");
-        MetodosBusqueda metodosBusqueda = new MetodosBusqueda(personas);
-     
+        //MetodosBusqueda metodosBusqueda = new MetodosBusqueda(personas);
+        MetododeBusquedaBinaria mBB = new MetododeBusquedaBinaria(personas);
+        mBB.showPersonByName();
+        mBB.showPersonByCode();
+
     }
 
 }
