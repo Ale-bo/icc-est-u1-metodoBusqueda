@@ -1,14 +1,22 @@
-public class App {
-    private static final MetodosBusqueda mB = new MetodosBusqueda();
-    public static void main(String[] args) throws Exception {
-        int[] arreglo = {12, 8, 20, 34, 5};
-        int valorBusqueda = 34;
+import java.util.Scanner;
 
-        int resultado = mB.busquedaLieneal(arreglo, valorBusqueda);
-        if (resultado != -1) {
-            System.out.println("Valor encontrado en la posicion " + resultado);
-        } else {
-            System.out.println("Valor no encontrado");
-        }
+import controllers.MetodosBusqueda;
+import models.Person;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        Person[] personas = new Person[7];
+        personas[0] = new Person(101, "Juan");
+        personas[1] = new Person(102, "Maria");
+        personas[2] = new Person(103, "Carlos");
+        personas[3] = new Person(104, "Ana");
+        personas[4] = new Person(105, "Luis");
+        personas[5] = new Person(106, "sofia");
+        personas[6] = new Person(107, "Pedro");
+        MetodosBusqueda metodosBusqueda = new MetodosBusqueda(personas);
+     
     }
+
 }
+
+   
